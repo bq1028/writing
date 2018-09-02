@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif}</style>
+    <title data-head="true">Domain-Specific Design Languages</title><meta name="description" content="The personal blog of Brent Jackson" data-head="true"/><meta name="author" content="Brent Jackson" data-head="true"/><meta name="twitter:card" content="summary" data-head="true"/><meta name="twitter:site" content="@jxnblk" data-head="true"/><meta name="twitter:title" content="Domain-Specific Design Languages" data-head="true"/><meta name="twitter:image" content="https://jxnblk.com/avatar.png" data-head="true"/><style data-styled-components="dUiVDW dAnclP ffIkcW iHZvIS fsERgr eSJKuO heJdfs ihezuW dprmrz houaHu bxHISe jWPlsU iFQYCJ gReYnD dTSnFq hKiLMS">
+/* sc-component-id: sc-bdVaJa */
+.sc-bdVaJa {} .ffIkcW{box-sizing:border-box;margin-left:auto;margin-right:auto;padding-bottom:128px;padding-left:16px;padding-right:16px;}.iHZvIS{box-sizing:border-box;}.fsERgr{line-height:1.625;box-sizing:border-box;margin-right:0px;-webkit-flex:none;-ms-flex:none;flex:none;} @media screen and (min-width:32em){.fsERgr{margin-right:0px;}} @media screen and (min-width:48em){.fsERgr{margin-right:256px;}}.eSJKuO{box-sizing:border-box;margin-top:128px;}
+/* sc-component-id: sc-bwzfXH */
+.sc-bwzfXH {} .hKiLMS{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+/* sc-component-id: sc-htpNat */
+.sc-htpNat {} .houaHu{margin-bottom:32px;margin-top:0px;} ul .houaHu{margin-bottom:0;} ul .houaHu{margin-bottom:0;}
+/* sc-component-id: sc-bxivhb */
+.sc-bxivhb {} .dUiVDW{font-family:system-ui,sans-serif;} .dUiVDW *{box-sizing:border-box;}
+/* sc-component-id: sc-htoDjs */
+.sc-htoDjs {} .dTSnFq{color:#0067ee;}
+/* sc-component-id: sc-iwsKbI */
+.sc-iwsKbI {} .heJdfs{color:inherit;display:block;-webkit-text-decoration:none;text-decoration:none;}
+/* sc-component-id: sc-gqjmRU */
+.sc-gqjmRU {} .bxHISe{margin:0px;margin-bottom:8px;margin-top:8px;}.jWPlsU{margin:0px;margin-bottom:32px;margin-top:16px;line-height:1.625;} ul .jWPlsU{margin-top:0;margin-bottom:0;}.iFQYCJ{margin:0px;margin-bottom:32px;margin-top:32px;padding-left:16px;font-size:20px;font-weight:700;}
+/* sc-component-id: sc-VigVT */
+.sc-VigVT {} .ihezuW{font-size:32px;font-weight:700;line-height:1.25;margin:0px;margin-bottom:64px;margin-top:64px;}.dprmrz{font-size:32px;font-weight:700;line-height:1.25;margin:0px;margin-bottom:16px;margin-top:32px;} @media screen and (min-width:32em){.dprmrz{font-size:48px;}}
+/* sc-component-id: sc-chPdSV */
+.sc-chPdSV {} .gReYnD{font-size:20px;margin:0px;margin-bottom:32px;margin-top:32px;padding-left:16px;}
+/* sc-component-id: sc-jAaTju */
+.sc-jAaTju {} .dAnclP{margin-left:auto;margin-right:auto;padding-bottom:128px;padding-left:16px;padding-right:16px;max-width:1024px;}</style>
+  </head>
+  <body>
+    <div id=root><div class="sc-bxivhb dUiVDW"><div class="sc-jAaTju dAnclP sc-bdVaJa ffIkcW sc-bdVaJa iHZvIS"><header><a class="sc-iwsKbI heJdfs" href="/writing/"><h1 class="sc-VigVT ihezuW" href="/">Jxnblk Writing</h1></a></header><main class="sc-bdVaJa fsERgr"><div><h1 class="sc-VigVT dprmrz" id="domain-specific-design-languages"><a class="sc-iwsKbI heJdfs" href="#domain-specific-design-languages">Domain-Specific Design Languages</a></h1><ul class="sc-htpNat houaHu"><li class="sc-gqjmRU bxHISe"><p class="sc-gqjmRU jWPlsU">definition of DSL</p><blockquote class="sc-chPdSV gReYnD sc-gqjmRU iFQYCJ" font-weight="bold"><p class="sc-gqjmRU jWPlsU">A domain-specific language (DSL) is a computer language specialized to a particular application domain. This is in contrast to a general-purpose language (GPL), which is broadly applicable across domains.
+<a class="sc-htoDjs dTSnFq" href="https://en.wikipedia.org/wiki/Domain-specific_language">https://en.wikipedia.org/wiki/Domain-specific_language</a>
+A domain-specific language is created specifically to solve problems in a particular domain and is not intended to be able to solve problems outside it (although that may be technically possible). In contrast, general-purpose languages are created to solve problems in many domains.</p></blockquote></li><li class="sc-gqjmRU bxHISe"><p class="sc-gqjmRU jWPlsU">consider designing in iOS, it requires domain-specific (i.e. platform-specific) design conventions and patterns, predominantly outlined in Apple&#x27;s HIG</p></li></ul><p class="sc-gqjmRU jWPlsU">Deviating from the HIG means you are creating a new design language specific to your application,
+which may have its benefits, but also requires more learning on the part of the user.</p><p class="sc-gqjmRU jWPlsU">Similarly, deviating from a web application&#x27;s style guide, UI component library, or interaction pattern library
+is equivalent to creating a new design language that users need to learn.</p><p class="sc-gqjmRU jWPlsU">The web itself has it&#x27;s own design language.
+Users have acclimated to using blue underlined links, scrolling through pages, using standard form elements,
+as well as a plethora of other interaction design patterns.</p><p class="sc-gqjmRU jWPlsU">Though sometimes DSLs are appropriate,
+the main disadvantage to using a DSL is that it requires domain-specifig knowledge of certain APIs rather than relying on more standard conventions. An example of this would be using coffeescript or JSX, rather than the standardized JavaScript (EMCAScript) syntax</p></div></main><footer><div class="sc-bwzfXH hKiLMS sc-bdVaJa eSJKuO sc-bdVaJa eSJKuO"><a class="sc-iwsKbI heJdfs" href="https://jxnblk.com">Made by Jxnblk</a></div></footer></div><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,"script","//www.google-analytics.com/analytics.js","ga"); ga("create", "UA-4603832-6", "auto"); ga("send", "pageview");</script></div></div>
+    
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif}</style>
+    <title data-head="true">Unit testing UI</title><meta name="description" content="The personal blog of Brent Jackson" data-head="true"/><meta name="author" content="Brent Jackson" data-head="true"/><meta name="twitter:card" content="summary" data-head="true"/><meta name="twitter:site" content="@jxnblk" data-head="true"/><meta name="twitter:title" content="Unit testing UI" data-head="true"/><meta name="twitter:image" content="https://jxnblk.com/avatar.png" data-head="true"/><style data-styled-components="dUiVDW dAnclP ffIkcW iHZvIS fsERgr eSJKuO heJdfs ihezuW dprmrz kgOQiB jWPlsU dTSnFq kLDilu kjJiZl hKiLMS">
+/* sc-component-id: sc-bdVaJa */
+.sc-bdVaJa {} .ffIkcW{box-sizing:border-box;margin-left:auto;margin-right:auto;padding-bottom:128px;padding-left:16px;padding-right:16px;}.iHZvIS{box-sizing:border-box;}.fsERgr{line-height:1.625;box-sizing:border-box;margin-right:0px;-webkit-flex:none;-ms-flex:none;flex:none;} @media screen and (min-width:32em){.fsERgr{margin-right:0px;}} @media screen and (min-width:48em){.fsERgr{margin-right:256px;}}.eSJKuO{box-sizing:border-box;margin-top:128px;}
+/* sc-component-id: sc-bwzfXH */
+.sc-bwzfXH {} .hKiLMS{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+/* sc-component-id: sc-bxivhb */
+.sc-bxivhb {} .dUiVDW{font-family:system-ui,sans-serif;} .dUiVDW *{box-sizing:border-box;}
+/* sc-component-id: sc-htoDjs */
+.sc-htoDjs {} .dTSnFq{color:#0067ee;}
+/* sc-component-id: sc-iwsKbI */
+.sc-iwsKbI {} .heJdfs{color:inherit;display:block;-webkit-text-decoration:none;text-decoration:none;}
+/* sc-component-id: sc-gqjmRU */
+.sc-gqjmRU {} .jWPlsU{margin:0px;margin-bottom:32px;margin-top:16px;line-height:1.625;} ul .jWPlsU{margin-top:0;margin-bottom:0;}
+/* sc-component-id: sc-VigVT */
+.sc-VigVT {} .ihezuW{font-size:32px;font-weight:700;line-height:1.25;margin:0px;margin-bottom:64px;margin-top:64px;}.dprmrz{font-size:32px;font-weight:700;line-height:1.25;margin:0px;margin-bottom:16px;margin-top:32px;} @media screen and (min-width:32em){.dprmrz{font-size:48px;}}.kgOQiB{font-size:24px;font-weight:700;line-height:1.25;margin:0px;margin-bottom:16px;margin-top:32px;} @media screen and (min-width:32em){.kgOQiB{font-size:32px;}}
+/* sc-component-id: sc-kGXeez */
+.sc-kGXeez {} .kLDilu{font-size:14px;font-family:"SF Mono","Roboto Mono",Menlo,monospace;margin:0px;margin-bottom:32px;margin-top:32px;padding:16px;overflow:auto;background-color:#eee;}.kjJiZl{font-size:14px;font-family:"SF Mono","Roboto Mono",Menlo,monospace;margin:0px;margin-top:32px;overflow:auto;}
+/* sc-component-id: sc-jAaTju */
+.sc-jAaTju {} .dAnclP{margin-left:auto;margin-right:auto;padding-bottom:128px;padding-left:16px;padding-right:16px;max-width:1024px;}</style>
+  </head>
+  <body>
+    <div id=root><div class="sc-bxivhb dUiVDW"><div class="sc-jAaTju dAnclP sc-bdVaJa ffIkcW sc-bdVaJa iHZvIS"><header><a class="sc-iwsKbI heJdfs" href="/writing/"><h1 class="sc-VigVT ihezuW" href="/">Jxnblk Writing</h1></a></header><main class="sc-bdVaJa fsERgr"><div><h1 class="sc-VigVT dprmrz" id="unit-testing-ui"><a class="sc-iwsKbI heJdfs" href="#unit-testing-ui">Unit testing UI</a></h1><p class="sc-gqjmRU jWPlsU">I recently read
+<a class="sc-htoDjs dTSnFq" href="http://product.voxmedia.com/2016/4/20/11458814/how-designers-can-use-unit-testing-to-build-resilient-and-happy-design-systems">this excellent article</a>,
+where the design team at Vox has devised a testing framework for new UI <a class="sc-htoDjs dTSnFq" href="/writing/posts/components">components</a> introduced into their pattern library.
+While the methods they suggest are excellent, and what I’d consider something that should be industry-standard in our field,
+it got me thinking that this concept could be taken a step further.
+What if designers wrote actual unit tests for UI components?
+What if those tests were actually applied in user acceptance testing, A/B tests, and tested against performance metrics?</p><h2 class="sc-VigVT kgOQiB" id="what-would-a-unit-test-look-like"><a class="sc-iwsKbI heJdfs" href="#what-would-a-unit-test-look-like">What would a unit test look like?</a></h2><p class="sc-gqjmRU jWPlsU">This is a really contrived example of what a UI unit test could look like:</p><pre class="sc-kGXeez kLDilu">describe: CTA button
+  context: when a user sees the button
+    expect: Users should know that the button is clickable
+    expect: User should be able to click the button
+    expect: Conversions should be above 4%
+</pre><p class="sc-gqjmRU jWPlsU">Taking a cue from test driven development, these tests should be written before any design work is started, and they should &quot;fail&quot;  – because there’s no design yet.</p><p class="sc-gqjmRU jWPlsU">Any work that follows should be towards making those tests pass.</p><p class="sc-gqjmRU jWPlsU">You might notice that this looks suspiciously like a <a class="sc-htoDjs dTSnFq" href="https://en.wikipedia.org/wiki/User_story">user story</a>,
+but I think this approach differs in a few ways.
+First, user stories attempt to capture the <em>how</em> and <em>why</em> in addition to the <em>what.</em>
+These unit tests only concern themselves with <em>what</em>.
+Secondly, user stories are very much a part of Agile software development,
+whereas these are simply meant to measure the design of UI components.</p><h2 class="sc-VigVT kgOQiB" id="running-tests"><a class="sc-iwsKbI heJdfs" href="#running-tests">“Running” tests</a></h2><p class="sc-gqjmRU jWPlsU">Once you have a potential component, or even better, several potential components,
+you’d be ready to start testing it against the unit tests previously written.
+These tests shouldn’t overshadow the typical formats and methodologies of user testing, A/B testing, etc.
+Instead, they should be used as an analytical tool to gauge the results.</p><p class="sc-gqjmRU jWPlsU">If, when user testing a feature, the user doesn’t notice the button, there’s still more design work to do.</p><p class="sc-gqjmRU jWPlsU">If, after ramping up a new button component, A/B testing shows that conversion is lower than expected, there’s still more work to do.</p><p class="sc-gqjmRU jWPlsU">If users are bouncing at higher-than-anticipated rates because of slow page load, there’s still more work to be done.</p><p class="sc-gqjmRU jWPlsU">Now, I will admit that design work is a lot less black and white than software development can be, and that it might be easy to shoot yourself in the foot with an approach like this. If, for example, conversion never gets above 3.9%, and you spend 2 weeks designing and redesigning a button, there are probably some other variables affecting things, and there are better ways to prioritize your time.</p><p class="sc-gqjmRU jWPlsU">But taking this idea as an approach to problem solving, gauging the efficacy of a design solution, and setting up goals for a product, I think it’s a concept worth exploring.</p></div><pre class="sc-kGXeez kjJiZl">Mon Jun 20 2016</pre></main><footer><div class="sc-bwzfXH hKiLMS sc-bdVaJa eSJKuO sc-bdVaJa eSJKuO"><a class="sc-iwsKbI heJdfs" href="https://jxnblk.com">Made by Jxnblk</a></div></footer></div><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,"script","//www.google-analytics.com/analytics.js","ga"); ga("create", "UA-4603832-6", "auto"); ga("send", "pageview");</script></div></div>
+    
+  </body>
+</html>

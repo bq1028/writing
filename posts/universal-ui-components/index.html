@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif}</style>
+    <title data-head="true">Universal UI Components</title><meta name="description" content="The personal blog of Brent Jackson" data-head="true"/><meta name="author" content="Brent Jackson" data-head="true"/><meta name="twitter:card" content="summary" data-head="true"/><meta name="twitter:site" content="@jxnblk" data-head="true"/><meta name="twitter:title" content="Universal UI Components" data-head="true"/><meta name="twitter:image" content="https://jxnblk.com/avatar.png" data-head="true"/><style data-styled-components="dUiVDW dAnclP ffIkcW iHZvIS fsERgr eSJKuO heJdfs ihezuW dprmrz kgOQiB jWPlsU bxHISe dTSnFq houaHu iQjkbY kLDilu kjJiZl hKiLMS">
+/* sc-component-id: sc-bdVaJa */
+.sc-bdVaJa {} .ffIkcW{box-sizing:border-box;margin-left:auto;margin-right:auto;padding-bottom:128px;padding-left:16px;padding-right:16px;}.iHZvIS{box-sizing:border-box;}.fsERgr{line-height:1.625;box-sizing:border-box;margin-right:0px;-webkit-flex:none;-ms-flex:none;flex:none;} @media screen and (min-width:32em){.fsERgr{margin-right:0px;}} @media screen and (min-width:48em){.fsERgr{margin-right:256px;}}.eSJKuO{box-sizing:border-box;margin-top:128px;}
+/* sc-component-id: sc-bwzfXH */
+.sc-bwzfXH {} .hKiLMS{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+/* sc-component-id: sc-htpNat */
+.sc-htpNat {} .houaHu{margin-bottom:32px;margin-top:0px;} ul .houaHu{margin-bottom:0;} ul .houaHu{margin-bottom:0;}
+/* sc-component-id: sc-bxivhb */
+.sc-bxivhb {} .dUiVDW{font-family:system-ui,sans-serif;} .dUiVDW *{box-sizing:border-box;}
+/* sc-component-id: sc-htoDjs */
+.sc-htoDjs {} .dTSnFq{color:#0067ee;}
+/* sc-component-id: sc-iwsKbI */
+.sc-iwsKbI {} .heJdfs{color:inherit;display:block;-webkit-text-decoration:none;text-decoration:none;}
+/* sc-component-id: sc-gqjmRU */
+.sc-gqjmRU {} .jWPlsU{margin:0px;margin-bottom:32px;margin-top:16px;line-height:1.625;} ul .jWPlsU{margin-top:0;margin-bottom:0;}.bxHISe{margin:0px;margin-bottom:8px;margin-top:8px;}
+/* sc-component-id: sc-VigVT */
+.sc-VigVT {} .ihezuW{font-size:32px;font-weight:700;line-height:1.25;margin:0px;margin-bottom:64px;margin-top:64px;}.dprmrz{font-size:32px;font-weight:700;line-height:1.25;margin:0px;margin-bottom:16px;margin-top:32px;} @media screen and (min-width:32em){.dprmrz{font-size:48px;}}.kgOQiB{font-size:24px;font-weight:700;line-height:1.25;margin:0px;margin-bottom:16px;margin-top:32px;} @media screen and (min-width:32em){.kgOQiB{font-size:32px;}}
+/* sc-component-id: sc-kGXeez */
+.sc-kGXeez {} .kLDilu{font-size:14px;font-family:"SF Mono","Roboto Mono",Menlo,monospace;margin:0px;margin-bottom:32px;margin-top:32px;padding:16px;overflow:auto;background-color:#eee;}.kjJiZl{font-size:14px;font-family:"SF Mono","Roboto Mono",Menlo,monospace;margin:0px;margin-top:32px;overflow:auto;}
+/* sc-component-id: sc-kpOJdX */
+.sc-kpOJdX {} .iQjkbY{font-size:inherit;font-family:"SF Mono","Roboto Mono",Menlo,monospace;}
+/* sc-component-id: sc-jAaTju */
+.sc-jAaTju {} .dAnclP{margin-left:auto;margin-right:auto;padding-bottom:128px;padding-left:16px;padding-right:16px;max-width:1024px;}</style>
+  </head>
+  <body>
+    <div id=root><div class="sc-bxivhb dUiVDW"><div class="sc-jAaTju dAnclP sc-bdVaJa ffIkcW sc-bdVaJa iHZvIS"><header><a class="sc-iwsKbI heJdfs" href="/writing/"><h1 class="sc-VigVT ihezuW" href="/">Jxnblk Writing</h1></a></header><main class="sc-bdVaJa fsERgr"><div><h1 class="sc-VigVT dprmrz" id="universal-ui-components"><a class="sc-iwsKbI heJdfs" href="#universal-ui-components">Universal UI Components</a></h1><p class="sc-gqjmRU jWPlsU">For a while now, I’ve been interested in the idea of creating portable,
+interoperable functional UI components that can work in any DOM rendering library,
+whether it’s
+<a class="sc-htoDjs dTSnFq" href="https://facebook.github.io/react/">React</a>,
+<a class="sc-htoDjs dTSnFq" href="https://preactjs.com">Preact</a>,
+<a class="sc-htoDjs dTSnFq" href="https://github.com/dominictarr/hyperscript">hyperscript</a>,
+<a class="sc-htoDjs dTSnFq" href="https://github.com/shama/bel">bel</a>,
+<a class="sc-htoDjs dTSnFq" href="https://github.com/maxogden/yo-yo">yo-yo</a>,
+or some other library.</p><p class="sc-gqjmRU jWPlsU">The idea of functional UI components is a simple one: pass arguments into a function and it returns a representation of the DOM,
+usually with encapsulated styles and interactivity handled with callbacks to a global state, a la Redux.</p><p class="sc-gqjmRU jWPlsU">If you look at the currently available technology, there are predominantly three ways to create these components:</p><ul class="sc-htpNat houaHu"><li class="sc-gqjmRU bxHISe"><a class="sc-htoDjs dTSnFq" href="https://facebook.github.io/jsx/"><strong>JSX</strong></a> (from React) - uses an XML-like syntax to call functions that return representations of DOM elements</li><li class="sc-gqjmRU bxHISe"><a class="sc-htoDjs dTSnFq" href="https://github.com/dominictarr/hyperscript"><strong>Hyperscript</strong></a> - similar to JSX, but uses standard JavaScript syntax and function calls</li><li class="sc-gqjmRU bxHISe"><a class="sc-htoDjs dTSnFq" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals"><strong>ES2015 tagged template literals</strong></a> - a new string type introduced to JavaScript</li></ul><p class="sc-gqjmRU jWPlsU">Each has its own pros and cons. While JSX is mostly syntactic sugar, some prefer to use standard JavaScript syntax.
+One big advantage JSX has is that it abstracts away the function used to create DOM elements.
+For example, React uses <code class="sc-kpOJdX iQjkbY">React.createElement</code> while Preact uses <code class="sc-kpOJdX iQjkbY">Preact.h</code>.
+The pragma used in JSX is configurable by the end user.
+Hyperscript, although older than JSX, uses a similar function, but is written in standard JavaScript.
+Tagged template literals are also standard JavaScript,
+but require a little bit of extra code to change template literals into DOM elements.</p><h2 class="sc-VigVT kgOQiB" id="the-same-but-different"><a class="sc-iwsKbI heJdfs" href="#the-same-but-different">The same, but different</a></h2><p class="sc-gqjmRU jWPlsU">Assuming we pick one of the above syntaxes,
+there are relatively few differences among the implementations of components across libraries.
+For example, here is a bare-bones Button component for several different libraries.
+For brevity, styles have been left out of these examples.</p><pre class="sc-kGXeez kLDilu">// React using JSX
+import React from &#x27;react&#x27;
+
+const Button = (props) =&gt; (
+  &lt;button {...props} /&gt;
+)
+export default Button
+</pre><pre class="sc-kGXeez kLDilu">// Preact using JSX
+import { h } from &#x27;preact&#x27;
+
+const Button = (props) =&gt; (
+  &lt;button {...props} /&gt;
+)
+export default Button
+</pre><pre class="sc-kGXeez kLDilu">// Hyperscript
+import h from &#x27;hyperscript&#x27;
+
+const Button = (props) =&gt; (
+  h(&#x27;button&#x27;, props)
+)
+export default Button
+</pre><pre class="sc-kGXeez kLDilu">// yo-yo using tagged template literals
+import yo from &#x27;yo-yo&#x27;
+
+const Button = ({ text, ...props }) =&gt; (
+  yo`&lt;button ${props}&gt;${text}&lt;/button`
+)
+export default Button
+</pre><p class="sc-gqjmRU jWPlsU">There are still quite a few differences in syntax between JSX, hyperscript, and tagged template literals.
+For the sake of this post, I’ll focus on implementing these components in JSX.</p><p class="sc-gqjmRU jWPlsU">The first three examples are covered, but here’s what the hyperscript and yo-yo examples would look like in JSX.</p><pre class="sc-kGXeez kLDilu">// Hyperscript with JSX
+import h from &#x27;hyperscript&#x27;
+
+const Button = (props) =&gt; (
+  &lt;button {...props} /&gt;
+)
+export default Button
+</pre><pre class="sc-kGXeez kLDilu">// bel (yo-yo) with JSX
+// yo-yo uses the bel package to create elements
+import { createElement } from &#x27;bel&#x27;
+
+const Button = (props) =&gt; (
+  &lt;button {...props} /&gt;
+)
+export default Button
+</pre><p class="sc-gqjmRU jWPlsU">For each of the non-React versions, JSX needs to be configured to use the appropriate pragma.
+Hyperscript and Preact both name their create element functions <code class="sc-kpOJdX iQjkbY">h</code>.
+Here is an example <code class="sc-kpOJdX iQjkbY">.babelrc</code> configuration.</p><pre class="sc-kGXeez kLDilu">{
+  &quot;presets&quot;: [
+    &quot;es2015&quot;,
+    &quot;stage-0&quot;
+  ],
+  &quot;plugins&quot;: [
+    [
+      &quot;transform-react-jsx&quot;,
+      { &quot;pragma&quot;: &quot;h&quot; }
+    ]
+  ]
+}
+</pre><p class="sc-gqjmRU jWPlsU">Although the other libraries name their create element functions differently,
+they can all be named <code class="sc-kpOJdX iQjkbY">h</code> within the components for cross-library compatibility.</p><pre class="sc-kGXeez kLDilu">// React using JSX
+import { createElement as h } from &#x27;react&#x27;
+
+const Button = (props) =&gt; (
+  &lt;button {...props} /&gt;
+)
+export default Button
+</pre><p class="sc-gqjmRU jWPlsU">At this point, the only difference in these components across libraries is the <code class="sc-kpOJdX iQjkbY">import</code> statement.
+Using a module bundler like webpack, even this can be abstracted out of the component module.</p><p class="sc-gqjmRU jWPlsU">Using webpack’s ProvidePlugin, the create element function can be exposed to all modules.
+This does involve having a variable in the global scope, but I think the trade-off might be worth it in some cases.</p><pre class="sc-kGXeez kLDilu">// Custom create-element module
+const h = require(&#x27;preact&#x27;).h
+module.exports = h
+</pre><pre class="sc-kGXeez kLDilu">// Example webpack configuration for Preact
+const path = require(&#x27;path&#x27;)
+const webpack = require(&#x27;webpack&#x27;)
+
+module.exports = {
+  ...,
+  plugins: [
+    new webpack.ProvidePlugin([
+      h: path.resolve(&#x27;./preact-create-element&#x27;)
+    ])
+  ]
+}
+</pre><p class="sc-gqjmRU jWPlsU">To avoid variable collisions, the function could be named anything (e.g. <code class="sc-kpOJdX iQjkbY">__h</code>) as long as the <code class="sc-kpOJdX iQjkbY">.babelrc</code> pragma matches.</p><p class="sc-gqjmRU jWPlsU">In addition to the name of the create element function, there are some slight differences in the naming conventions
+for HTML attributes (e.g. <code class="sc-kpOJdX iQjkbY">htmlFor</code> and <code class="sc-kpOJdX iQjkbY">className</code>) and handling child elements.
+Transforming these props could be handled in the custom function, but the implementation details have been left out of this post.</p><p class="sc-gqjmRU jWPlsU">With this configuration, the Button component can now be written like this:</p><pre class="sc-kGXeez kLDilu">const Button = (props) =&gt; (
+  &lt;button {...props} /&gt;
+)
+export default Button
+</pre><p class="sc-gqjmRU jWPlsU">I’ve put up a rough demonstration of this concept, with the same two UI components being rendered to the DOM by
+React, Preact, hyperscript, and bel here: <a class="sc-htoDjs dTSnFq" href="http://jxnblk.com/universal-components">Universal Components</a>.</p><p class="sc-gqjmRU jWPlsU">With a little bit of configuration, a whole library of UI components could be written in a manner that would allow
+the DOM rendering library to be swapped out at some point in the future,
+without the need to use a tool like <a class="sc-htoDjs dTSnFq" href="https://github.com/facebook/codemod">Codemod</a>.
+There’s probably even a way to wrap components in an open-source library like <a class="sc-htoDjs dTSnFq" href="http://jxnblk.com/rebass">Rebass</a>
+to make them compatible with more than one functional DOM rendering library as well.</p></div><pre class="sc-kGXeez kjJiZl">Wed Jul 06 2016</pre></main><footer><div class="sc-bwzfXH hKiLMS sc-bdVaJa eSJKuO sc-bdVaJa eSJKuO"><a class="sc-iwsKbI heJdfs" href="https://jxnblk.com">Made by Jxnblk</a></div></footer></div><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,"script","//www.google-analytics.com/analytics.js","ga"); ga("create", "UA-4603832-6", "auto"); ga("send", "pageview");</script></div></div>
+    
+  </body>
+</html>
